@@ -1,0 +1,12 @@
+{
+  "name": "os-assignment2",
+  "version": "1.0.0",
+  "description": "My simple API for OS lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
