@@ -1,26 +1,25 @@
+const http = require('http');
 
+const server = http.createServer((req, res) => {
+    
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    
+    
+    const responseData = {
+        projectName: "OS Assignment 2 - Task API",
+        status: "Running in Docker",
+        tasks: [
+            { id: 1, title: "Setup Docker Environment", completed: true },
+            { id: 2, title: "Push to GitHub", completed: true },
+            { id: 3, title: "Submit PDF Report", completed: false }
+        ]
+    };
 
-const express = require('express');
-const app = express();
-const port = 3000;
-
-// My project data
-let myTasks = [
-    { id: 1, title: "Install Docker", done: true },
-    { id: 2, title: "Finish OS Assignment", done: false }
-];
-
-// Default route
-app.get('/', (req, res) => {
-    res.send("Welcome to my OS assignment project!");
+    
+    res.end(JSON.stringify(responseData, null, 2));
 });
 
-// Get tasks route
-app.get('/tasks', (req, res) => {
-    res.json(myTasks);
-});
-
-// Start the server
-app.listen(port, () => {
-    console.log("Server is running on port 3000...");
+const PORT = 3000;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}...`);
 });

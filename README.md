@@ -1,6 +1,6 @@
 # OS Lab Assignment 2
 
-This is a simple Node.js API containerized with Docker for my Operating Systems lab assignment.
+This project is a simple Node.js Task API running inside a Docker container. It returns a JSON list of tasks, demonstrating how to containerize backend services.
 
 ## Project Structure
 - `src/`: Contains the Node.js application code.
