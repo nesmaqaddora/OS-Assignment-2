@@ -7,6 +7,14 @@ This project is a simple Node.js Task API running inside a Docker container. It 
 - `docs/screenshots/`: Contains proof of execution.
 - `Dockerfile`: Instructions to build the Docker image.
 
+## Tech Stack
+- **Node.js**: Backend logic to serve the JSON Task API.
+- **Docker**: Containerization to run the application isolated and reliably.
+
+## Configuration Notes
+- **Port**: The application listens on port `3000`. 
+- **Environment Variables**: No external `.env` variables are required for this project.
+
 ## Commands Used
 Build the image:
 `docker build -t task-api .`
